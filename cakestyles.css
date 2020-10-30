@@ -1,0 +1,93 @@
+body {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5db99e18eccf16708e78ec7c/1576012200044-FSK0GBX887ZN7CAQAKJL/ke17ZwdGBToddI8pDm48kER99XzJSCVY9jo2M337vs17gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0m_nwPNs2kYVhoOQZiVFxSauCKOkZXcgPn9-mG-Y1fC0fDx6li3k4OR1INPmUsWOGw/Sprinkles+background.jpg?format=2500w");
+}
+h1 {
+    font-size: 62px;
+    font-weight: bolder;
+    color: #2E4053;
+    text-align: center;
+}
+h1:hover {
+    font-size: 72px;
+    font-weight: bolder;
+    text-align: center;
+    transition: 0.5s;
+}
+h2 {
+    font-size: 42px;
+    font-weight: bold;
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+    color: #2E4053;
+}
+h2:hover {
+    font-size: 50px;
+    font-weight: bold;
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2E4053;
+    transition: 0.5s;
+}
+h3:hover {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2E4053;
+}
+h4{
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+hr {
+    color: #2E4053;
+}
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%
+    }
+}
+.column {
+    float:left;
+    width: 33.333%;
+    transition: width 0.10s;
+}
+table {
+    border-spacing: 10px;
+    border-color: black;
+    border-radius: 2%
+}
+button {
+    font-size: 20px;
+}
+label {
+    font-size: 18px;
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+    color: black;
+}
+td {
+    font-size: 18px;
+    color: black;
+}
+.paymentarea{
+    background-image: url("https://i.pinimg.com/originals/85/1e/25/851e254f344183be63527bec8b041f83.jpg");
+    margin-left: 60%;
+    transition: margin-left 0.10s;
+    transition: boarder radius 5;
+    transition: bottom 5;
+    bottom: 10px;
+    width: 200px;
+    border-radius: 20px 0px 20px 0px;
+    overflow: hidden;
+    box-shadow: 8px 8px 20px #2E4053;
+}
+legend {
+    font-size: 18px;
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+}
+input {
+    font-size: 18px;
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+}

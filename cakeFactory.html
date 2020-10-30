@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cake Factory</title>
+    <link href="cakestyles.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src ="cakeCalculations.js"></script>
+    <h1>Cake Checklist</h1>
+</head>
+<body>
+    <hr>
+    <h3>Cake Budget</h3>
+    <form>
+        <legend>
+            $<input type = "number" id = "maxbudget" min="0" step="0.01" onchange="calculateTotal()"><br>
+            Number of slices:<br><input type ="number" id ="numslices" min="1" step="1" onchange="calculateTotal()"> 
+        </legend>
+    </form>
+    <br>
+    <form id="cakeform">
+        <div class="column left">
+            <div>
+                <h2>Style of Cake</h2>
+                <label for="style"><input type="radio" onclick="calculateTotal()" name="style" id="tr">Traditional</label><br>
+                <label for="style"><input type="radio" onclick="calculateTotal()" name="style" id="co">Contemporary</label><br>
+                <label for="style"><input type="radio" onclick="calculateTotal()" name="style" id="dr">Dramatic</label><br>
+                <label for="style"><input type="radio" onclick="calculateTotal()" name="style" id="or">Ornate</label><br>
+                <label for="style"><input type="radio" onclick="calculateTotal()" name="style" id="si">Simple</label><br>
+                <label for="style"><input type="radio" onclick="calculateTotal()" name="style" id="re">Regal</label><br>
+                <label for="style"><input type="radio" onclick="calculateTotal()" name="style" id="un">Unique</label><br>
+            </div>
+            <div>
+                <h2>Flavours & Fillings</h2>
+                <h4>$10/Slice</h4>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="cho" checked="checked">Chocolate</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="chm">Chocolate Mud</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="chw">White Chocolate</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="moc">Mocha</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="tru">Truffle</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="mou">Mousse</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="cara">Caramel</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="lem">Lemon/citrus</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="ora">Orange</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="carr">Carrot (spice)</label><br>
+                <label for="f&f"><input type="radio" onclick="calculateTotal()" name="f&f" id="bwc">Berries & Whipped Cream</label><br>
+            </div>
+        </div>
+        <div class="column middle">
+            <div>
+                <h2>Decorations</h2>
+                <h4>$20/slice</h4>
+                <label for="decor"><input type="radio" onclick="calculateTotal()" name="decor" id="sf" checked="checked">Sugar Flowers</label><br>
+                <label for="decor"><input type="radio" onclick="calculateTotal()" name="decor" id="ff">Fresh Flowers</label><br>
+                <label for="decor"><input type="radio" onclick="calculateTotal()" name="decor" id="cs">Chocolate Shavings</label><br>
+                <label for="decor"><input type="radio" onclick="calculateTotal()" name="decor" id="gs">Gold or Silver leaf</label><br>
+                <label for="decor"><input type="radio" onclick="calculateTotal()" name="decor" id="ps">Pearls</label><br>
+                <label for="decor"><input type="radio" onclick="calculateTotal()" name="decor" id="lw">Latticework</label><br>
+                <label for="decor"><input type="radio" onclick="calculateTotal()" name="decor" id="pp">Piping</label><br>
+                <label for="decor"><input type="radio" onclick="calculateTotal()" name="decor" id="ct">Cake Top</label><br>
+            </div>
+            <div>
+                <h2>Colours</h2>
+                <h4>$5/Slice</h4>
+                <label for="colour"><input type="radio" onclick="calculateTotal()" name="colour" id="white" checked="checked">White</label><br>
+                <label for="colour"><input type="radio" onclick="calculateTotal()" name="colour" id="ivory">Ivory</label><br>
+                <label for="colour"><input type="radio" onclick="calculateTotal()" name="colour" id="yellow">Yellow</label><br>
+                <label for="colour"><input type="radio" onclick="calculateTotal()" name="colour" id="peach">Peach</label><br>
+                <label for="colour"><input type="radio" onclick="calculateTotal()" name="colour" id="red">Red</label><br>
+                <label for="colour"><input type="radio" onclick="calculateTotal()" name="colour" id="pink">Pink</label><br>
+                <label for="colour"><input type="radio" onclick="calculateTotal()" name="colour" id="lavender">Lavender</label><br>
+            </div>
+        </div>
+        <div class="column right">
+            <h2>Shape & Structure</h2>
+            <label for="shape"><input type="radio" onclick="calculateTotal()" name="shape" value="round" checked="checked">Round   $20</label><br>
+            <label for="shape"><input type="radio" onclick="calculateTotal()" name="shape" value="oval">Oval   $40</label><br>
+            <label for="shape"><input type="radio" onclick="calculateTotal()" name="shape" value="square">Square   $30</label><br>
+            <label for="shape"><input type="radio" onclick="calculateTotal()" name="shape" value="rect">Rectangle   $20</label><br>
+            <label for="shape"><input type="radio" onclick="calculateTotal()" name="shape" value="heart">Heart   $50</label><br>
+            <label for="shape"><input type="radio" onclick="calculateTotal()" name="shape" value="sheet">Sheet   $40</label><br>
+            <label for="shape"><input type="radio" onclick="calculateTotal()" name="shape" value="tieredcolumn">Tiered (with columns)   $50</label><br>
+            <label for="shape"><input type="radio" onclick="calculateTotal()" name="shape" value="tieredstack">Tiered, stacked   $40</label><br>
+            <label for="shape"><input type="radio" onclick="calculateTotal()" name="shape" value="cupcake">Cupcakes   $20</label><br><br><br><br><br><br>
+        </div>
+    </form>
+    <div class="paymentarea">
+        <table>
+            <tr>
+                <td>Sub Total:</td>
+                <td id="subtot" class="final"></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td id="tax" class="final"></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total Price:</td>
+                <td id="totprice" class="final"></td>
+            </tr>
+        </table>
+        <br><br><button onclick="submitOrder()">Submit Order</button>
+    </div>
+</body>
+</html>
